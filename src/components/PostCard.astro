@@ -1,0 +1,64 @@
+---
+const { post } = Astro.props;
+const path = "/posts/" + post.slug;
+---
+<div class="outer-container">
+  <img class="image" src={post.data.image.url} alt={post.data.image.alt} />
+  <div class="inner-container">
+    <p class="post-title">{post.data.title}</p>
+    <p class="post-description">{post.data.description}</p>
+    <a href={path}>Read more ></a>
+  </div>
+</div>
+<style>
+  .outer-container {
+    width: 397px;
+    height: 416px;
+  }
+  .image {
+    width: 397px;
+    height: 200px;
+    border: 2px solid #747474;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .inner-container {
+    width: 364px;
+    margin: auto;
+  }
+  .post-title {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1.28px;
+  }
+  .post-description {
+    color: #A4A4A4;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  a {
+    color: #12C998;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.84px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #12C998;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+</style>

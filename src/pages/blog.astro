@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogList from "../components/BlogList";
+import "../styles/global.css"
+
+const pageTitle = "Blog";
+const posts = (await getCollection('posts')).sort(
+  (a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)
+);
+const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="content">
+    <h1 class="title" style="margin-top: 18px;">Blog</h1>
+    <p style="margin: 18px 0 66px;">
+      Dive into my thoughts and interests. I write down my thoughts and ideas in
+      here and hope will either find them interesting or helpful.
+    </p>
+    <BlogList client:load posts={posts} tags={tags} />
+  </div>
+</BaseLayout>
