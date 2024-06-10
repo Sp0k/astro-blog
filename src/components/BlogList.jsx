@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import BlogView from "./BlogView";
+import TagButton from "./TagButton";
 
 const BlogList = ({ posts, tags }) => {
   return (
     <div>
+      <TagButton tag="ssh" />
       {posts.map((post) => (
         <BlogView
           title={post.data.title}
