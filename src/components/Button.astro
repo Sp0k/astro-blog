@@ -1,0 +1,39 @@
+---
+const { buttonWidth, buttonHeight, fontSize, title, pressHandler, borderRadius } = Astro.props;
+---
+<button class="button" role="button" onclick={pressHandler}>{title}</button>
+<style define:vars={{ buttonWidth, buttonHeight, fontSize, borderRadius }}>
+.button {
+  appearance: none;
+  background-color: #12C998;
+  border: 2px solid #12C998;
+  border-radius: var(--borderRadius);
+  box-sizing: border-box;
+  color: #272727;
+  cursor: pointer;
+  font-size: var(--fontSize);
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+  margin: auto;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: var(--buttonWidth);
+  height: var(--buttonHeight);
+  will-change: transform;
+}
+
+.button:hover {
+  box-shadow: rgba(18, 201, 152, 0.30) 0 8px 15px;
+  transform: translateY(-2px);
+  color: #FFF;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+</style>

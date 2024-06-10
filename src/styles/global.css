@@ -1,0 +1,115 @@
+/* Imports */
+@import "fonts.css";
+
+/* Global */
+* {
+  margin: 0;
+}
+
+html {
+  background-color: #272727;
+  color: #d9d9d9;
+  margin: auto;
+  font-family: "Exo 2 Variable";
+}
+
+.page {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.content {
+  max-width: 1245px;
+  margin: auto;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: #a4a4a4;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+p {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.green {
+  color: #12c998;
+  font-weight: 600;
+  letter-spacing: 5%;
+  line-height: normal;
+}
+
+.line {
+  width: 1000px;
+  margin: auto;
+}
+
+/* Nav bar */
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 29px;
+}
+.nav li a {
+  font-size: 29px;
+  text-decoration: none;
+  color: #d9d9d9;
+  font-family: "Exo 2 Variable", sans-serif;
+  transition: 0.3s ease;
+}
+.nav:hover li a:not(:hover) {
+  opacity: 0.3;
+  filter: blur(1px);
+}
+.nav:hover li a:hover {
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer .grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .grid hr {
+  width: 50px;
+  height: 1px;
+  background-color: #999999;
+  border: none;
+  margin: 0 15px;
+}
+
+.footer .grid a svg {
+  fill: #999999;
+  height: auto;
+  width: 35px;
+  margin: 0 15px;
+  transition: 0.5s ease;
+}
+
+.footer .grid a:hover svg {
+  fill: #fff;
+  filter: drop-shadow(0 0 0.75rem rgba(18, 201, 152, 0.75));
+}
+
+.footer p {
+  color: #999999;
+  font-size: 20px;
+}

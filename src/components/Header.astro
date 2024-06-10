@@ -1,0 +1,36 @@
+---
+import Navigation from "./Navigation.astro"
+---
+<div class="header">
+  <a href="/" class="">gabsavard</a>
+  <Navigation />
+</div>
+<style>
+  .header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    border-left: solid 2px #747474;
+    border-right: solid 2px #747474;
+    border-radius: 30px;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 39px;
+    padding-right: 39px;
+    background-color: rbga(39, 39, 39, .99);
+    backdrop-filter: blur(1000px);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+  }
+  a {
+    text-decoration: none;
+    color: #d9d9d9;
+    font-family: 'Exo 2 Variable', sans-serif;
+
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+  }
+</style>
