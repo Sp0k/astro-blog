@@ -3,23 +3,22 @@ import { getCollection } from "astro:content"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Button from "../components/Button.astro"
 import PostCard from "../components/PostCard.astro"
+import Salutations from '../components/Salutations'
 import "../styles/global.css"
 
 const pageTitle = "Home"
-const friends = ["friends", "amis", "amigos", "amici", "freunde", "vrienden", "vänner", "venner", "prieteni"]
-const randomNum = Math.floor((Math.random() * 10))
-const resumeHandler = "console.log('Hello, World!')"
+const resumeHandler = "window.open('/gab_savard_resume.pdf')"
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)
 )
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   <!-- Hero image and text -->
   <div class="landing content">
     <div class="left">
-      <h1 class="title">Welcome, <div class="green">{friends[randomNum]}</div></h1>
+      <h1 class="title">Welcome, <Salutations client:load /></h1>
       <div class="intro">
         <p>
           Hi, I'm Gab! I am a computer Science Student from Canada, an
