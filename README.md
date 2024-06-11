@@ -19,8 +19,8 @@ I know websites usually don't have a feature part, especially when they use fram
     - [ ] Automatically updates with new projects
   - [ ] Project Page Layout
 - [ ] Blog
-  - [ ] Blog index page
-    - [ ] Filter the blog articles by tags
+  - [x] Blog index page
+    - [x] Filter the blog articles by tags
     - [x] Automatically updates with new articles
   - [ ] Blog article Layout
 - [ ] Contact Page
@@ -39,8 +39,29 @@ Astro-website/
 ├── public/
 │   ├── favicon.ico
 ├── src/
+│   ├── components/
+│   │   ├── BlogList.jsx
+│   │   ├── BlogView.jsx
+│   │   ├── Button.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── Line.astro
+│   │   ├── Navigation.astro
+│   │   ├── PostCard.astro
+│   │   └── TagButton.jsx
+│   ├── content/
+│   │   ├── config.ts
+│   │   └── posts/
+│   │       └── (All blog posts)
+│   ├── layouts/
+│   │   └── BaseLayout.astro
 │   ├── pages/
+│   │   ├── blog.astro
 │   │   └── index.astro
+│   ├── styles/
+│   │   ├── blogList.css
+│   │   ├── fonts.css
+│   │   └── global.css
 │   └── env.d.ts
 ├── astro.config.mjs
 ├── package.json
@@ -51,9 +72,11 @@ Astro-website/
 ```
 
 - public/: Static assets like images and icons.
+- src/components/: Reusable components used throughout the site.
+- src/layouts/: Layout components to structure different pages.
 - src/pages/: Page components for different routes.
+- src/styles/: Global and component-specific styles.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-

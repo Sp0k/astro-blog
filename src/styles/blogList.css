@@ -70,6 +70,7 @@
   font-family: "Exo 2 Variable";
   font-weight: 500;
   cursor: pointer;
+  margin: 5px;
 }
 
 .tag-button:hover,
@@ -81,4 +82,13 @@
 .tag-button.active {
   border-color: #12c998;
   color: #12c998;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  text-decoration: underline;
 }
