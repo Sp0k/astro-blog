@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "Automatic Scroll View"
+pubDate: "2024-06-08"
 date: 2024-06-08
 description: "My quick and easy trick to follow the cursor's position in a TextInput component in React Native"
 author: "Gab 'Sp0k' Savard"
-tags: ["javascript", "react-native", "learning", "tutorial", "app", "coding"]
+tags: ["javascript", "react-native", "tutorial", "mobile app"]
 image:
   url: "https://mobilecoderz.com/blog/wp-content/uploads/2022/04/React-Native-Featured-Image-2.png"
   alt: "An image showing a computer, a phone and the logos of Apple, Android and React Native"

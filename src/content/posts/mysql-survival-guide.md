@@ -1,9 +1,10 @@
 ---
 title: "MySQL Survival Guide"
+pubDate: "2024-02-18"
 date: 2024-02-18
 description: "My personal MySQL database coding guide based on Dalhousie's CSCI-2141: Intro to Databases"
 author: "Gab 'Sp0k' Savard"
-tags: ["mysql", "guide", "dalhousie", "database", "learning", "help"]
+tags: ["guide", "dalhousie", "database"]
 image:
   url: "https://servermall.com/upload/medialibrary/b36/gvr5uafwnfk2uthxs3dct6zoy3n2sijt/mysql.jpg"
   alt: "An image showing a computer, a phone and the logos of Apple, Android and React Native"
