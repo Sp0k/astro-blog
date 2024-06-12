@@ -92,3 +92,10 @@
 .filters {
   text-decoration: underline;
 }
+
+.sorry-message {
+  width: 978px;
+  height: auto;
+  color: #999999;
+  text-align: center;
+}

@@ -18,11 +18,11 @@ I know websites usually don't have a feature part, especially when they use fram
     - [ ] Filter the projects by tags
     - [ ] Automatically updates with new projects
   - [ ] Project Page Layout
-- [ ] Blog
+- [x] Blog
   - [x] Blog index page
     - [x] Filter the blog articles by tags
     - [x] Automatically updates with new articles
-  - [ ] Blog article Layout
+  - [x] Blog article Layout
 - [ ] Contact Page
   - [ ] Email form
   - [ ] Socials list

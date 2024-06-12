@@ -1,0 +1,78 @@
+.blogPost {
+  width: 1245px;
+  margin: 50px auto;
+}
+.blogPost a {
+  color: #12c998;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.84px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.blogPost a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #12c998;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.blogPost a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: -10px;
+  font-size: 35px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+ol,
+ul {
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+pre {
+  padding: 0; /* Padding around the code block */
+  border-radius: 8px; /* Rounded corners */
+  overflow: auto; /* Scrollbar if the content overflows */
+  color: #f8f8f2; /* Text color */
+}
+
+/* Style the code element inside pre */
+pre code {
+  font-size: 14px; /* Font size for code */
+  line-height: 1.6; /* Line height for code */
+  display: block;
+  white-space: pre-wrap; /* Wrap code if necessary */
+  padding: 16px;
+}
+
+/* Style inline code elements */
+code {
+  padding: 2px 4px; /* Padding for inline code */
+  border-radius: 4px; /* Rounded corners for inline code */
+  font-size: 14px; /* Font size for inline code */
+  color: #e83e8c; /* Text color for inline code */
+  background-color: #212121;
+}
+
+blockquote {
+  background-color: transparent;
+}

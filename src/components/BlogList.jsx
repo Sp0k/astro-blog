@@ -52,15 +52,21 @@ const BlogList = ({ posts, tags }) => {
         ))}
       </div>
       <div>
-        {list.map((post) => (
-          <BlogView
-            title={post.data.title}
-            description={post.data.description}
-            url={post.slug}
-            image={post.data.image}
-            key={post.id}
-          />
-        ))}
+        {list.length === 0 ? (
+          <p class="sorry-message">
+            Seems like there is no posts that match thoses tags
+          </p>
+        ) : (
+          list.map((post) => (
+            <BlogView
+              title={post.data.title}
+              description={post.data.description}
+              url={post.slug}
+              image={post.data.image}
+              key={post.id}
+            />
+          ))
+        )}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ const posts = (await getCollection('posts')).sort(
   (a, b) => Date.parse(b.data.date) - Date.parse(a.data.date)
 );
 const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
+tags.sort();
 ---
 
 <BaseLayout pageTitle={pageTitle}>

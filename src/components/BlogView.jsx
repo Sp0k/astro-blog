@@ -9,7 +9,7 @@ const BlogView = ({ title, description, url, image }) => {
         <div className="blog-title">{title}</div>
         <div className="blog-description">{description}</div>
         <a href={path} className="blog-button">
-          Read more >
+          Read more {`>`}
         </a>
       </div>
       <img src={image.url} alt={image.src} className="blog-image" />
