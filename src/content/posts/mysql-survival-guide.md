@@ -1,6 +1,5 @@
 ---
 title: "MySQL Survival Guide"
-pubDate: "2024-02-18"
 date: 2024-02-18
 description: "My personal MySQL database coding guide based on Dalhousie's CSCI-2141: Intro to Databases"
 author: "Gab 'Sp0k' Savard"

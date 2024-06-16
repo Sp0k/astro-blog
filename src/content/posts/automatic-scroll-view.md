@@ -1,6 +1,5 @@
 ---
 title: "Automatic Scroll View"
-pubDate: "2024-06-08"
 date: 2024-06-08
 description: "My quick and easy trick to follow the cursor's position in a TextInput component in React Native"
 author: "Gab 'Sp0k' Savard"

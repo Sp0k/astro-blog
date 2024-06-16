@@ -15,7 +15,7 @@ const { Content } = await entry.render();
 ---
 <BlogPostLayout frontMatter={entry.data}>
   <h1 class="title">{entry.data.title}</h1>
-  <p class="date">published: <b class="green">{entry.data.pubDate}</b></p>
+  <p class="date">published: <b class="green">{entry.data.date.toString().slice(4,15)}</b></p>
   <hr class="half-line">
   <Content />
 </BlogPostLayout>

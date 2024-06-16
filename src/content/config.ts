@@ -10,8 +10,7 @@ export const collections = {
       description: z.string().max(160, {
         message: "Description must be 160 characters or less.",
       }),
-      pubDate: z.string(), // Displayed date
-      date: z.date(), // Used to sort
+      date: z.date(),
       tags: z.array(z.string()),
       image: z
         .object({
