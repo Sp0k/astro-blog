@@ -1,3 +1,5 @@
+@import "colors.css";
+
 .blogPost {
   width: 1245px;
   margin: 50px auto;
@@ -19,7 +21,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #12c998;
+  background-color: var(--accent-main);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

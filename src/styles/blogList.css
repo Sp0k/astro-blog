@@ -1,6 +1,8 @@
+@import "colors.css";
+
 .container {
   width: 978px;
-  border: 2px solid #747474;
+  border: 2px solid var(--accent-secondary);
   border-radius: 20px;
   padding: 15px 0;
   margin-bottom: 31px;
@@ -27,7 +29,7 @@
 }
 
 .blog-button {
-  color: #12c998;
+  color: var(--accent-main);
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 0.84px;
@@ -43,7 +45,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #12c998;
+  background-color: var(--accent-main);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -55,14 +57,14 @@
 .blog-image {
   width: 337.5px;
   height: 170px;
-  border: 2px solid #747474;
+  border: 2px solid var(--accent-secondary);
   border-radius: 20px;
   overflow: hidden;
   margin-right: 23.5px;
 }
 
 .tag-button {
-  border: 2px solid #747474;
+  border: 2px solid var(--accent-secondary);
   background-color: transparent;
   padding: 3px 5px;
   color: #747474;
@@ -75,13 +77,13 @@
 
 .tag-button:hover,
 .tag-button.active:hover {
-  border-color: #d9d9d9;
-  color: #d9d9d9;
+  border-color: var(--text-main);
+  color: var(--text-main);
 }
 
 .tag-button.active {
-  border-color: #12c998;
-  color: #12c998;
+  border-color: var(--accent-main);
+  color: var(--accent-main);
 }
 
 .blog-container {
@@ -96,6 +98,6 @@
 .sorry-message {
   width: 978px;
   height: auto;
-  color: #999999;
+  color: var(--footer);
   text-align: center;
 }
