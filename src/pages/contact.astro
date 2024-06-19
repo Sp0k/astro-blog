@@ -8,13 +8,19 @@ const pageTitle = "Contact";
 <BaseLayout pageTitle={pageTitle}>
   <div class="content">
     <h1 class="title" style="margin-top: 18px;">Contact</h1>
-    <p style="margin: 18px 0 66px;">
+    <p style="margin: 18px 0 0;">
       Have a question, correction or project for me? Send me a message! Like my work?
       Follow me on social media platforms!
     </p>
-    <!-- The page's content -->
-    <div>
+    <div class="page-content">
       <ContactForm client:load />
     </div>
   </div>
 </BaseLayout>
+<style>
+  .page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+</style>

@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import "../styles/contactForm.css";
 
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -42,8 +43,7 @@ const ContactForm = () => {
         placeholder="First name"
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
-        className="name"
-        required
+        className="name spacer"
       />
       <input
         type="text"
@@ -51,7 +51,6 @@ const ContactForm = () => {
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
         className="name"
-        required
       />
       <input
         type="email"
@@ -66,9 +65,10 @@ const ContactForm = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         className="message"
+        rows={7}
         required
       ></textarea>
-      <button type="submit">Send Email</button>
+      <button type="submit">Send</button>
     </form>
   );
 };
