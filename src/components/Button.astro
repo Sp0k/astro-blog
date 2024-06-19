@@ -1,12 +1,14 @@
 ---
+import "../styles/colors.css";
+
 const { buttonWidth, buttonHeight, fontSize, title, pressHandler, borderRadius } = Astro.props;
 ---
 <button class="button" role="button" onclick={pressHandler}>{title}</button>
 <style define:vars={{ buttonWidth, buttonHeight, fontSize, borderRadius }}>
 .button {
   appearance: none;
-  background-color: #12C998;
-  border: 2px solid #12C998;
+  background-color: var(--accent-main);
+  border: 2px solid var(--accent-main);
   border-radius: var(--borderRadius);
   box-sizing: border-box;
   color: #272727;
