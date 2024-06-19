@@ -1,11 +1,11 @@
 ---
 import "../styles/colors.css"
-const { svg, title, link } = Astro.props;
+const { svg, title, link, viewBox } = Astro.props;
 
-const onPress = `window.open(${link})`
+const onPress = `window.open('${link}')`;
 ---
 <button role="button" onclick={onPress}>
-  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox={viewBox}>
     <path d={svg}></path>
   </svg>
   <p>{title}</p>
@@ -31,8 +31,8 @@ const onPress = `window.open(${link})`
   }
   button svg {
     fill: var(--accent-secondary);
-    height: auto;
-    width: 60px;
+    width: auto;
+    height: 70px;
     transition: 0.2s ease-in-out;
   }
   button:hover {
