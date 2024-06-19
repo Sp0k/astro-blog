@@ -1,51 +1,74 @@
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const ContactForm = () => {
-  const form = useRef();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
+    const serviceId = "service_iu4kme9";
+    const templateId = "template_9erq04q";
+    const publicKey = "9eg31SGGnOYt6jxnF";
+
+    const templateParams = {
+      user_firstname: firstName,
+      user_lastname: lastName,
+      user_email: email,
+      message: message,
+    };
+
     emailjs
-      .sendForm("service_iu4kme9", "template_kepa9o8", form.current, {
-        publicKey: "9eg31SGGnOYt6jxnF",
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("email sent successfully", response);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
       })
-      .then(
-        () => {
-          console.log("Success!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        },
-      );
+      .catch((error) => {
+        console.log("error sending email", error);
+      });
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form onSubmit={handleSubmit} className="emailForm">
       <input
         type="text"
-        id="firstName"
-        name="user_firstname"
         placeholder="First name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        className="name"
         required
       />
       <input
         type="text"
-        id="lastName"
-        name="user_lastname"
         placeholder="Last name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        className="name"
         required
       />
       <input
         type="email"
-        name="user_email"
-        id="email"
         placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="email"
         required
       />
-      <textarea name="message" id="message" />
-      <input type="submit" value="Send" />
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        className="message"
+        required
+      ></textarea>
+      <button type="submit">Send Email</button>
     </form>
   );
 };
