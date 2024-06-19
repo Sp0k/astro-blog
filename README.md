@@ -23,9 +23,9 @@ I know websites usually don't have a feature part, especially when they use fram
     - [x] Filter the blog articles by tags
     - [x] Automatically updates with new articles
   - [x] Blog article Layout
-- [ ] Contact Page
-  - [ ] Email form
-  - [ ] Socials list
+- [x] Contact Page
+  - [x] Email form
+  - [x] Socials list
 - [ ] About Page
 
 ## Project Structure
@@ -43,11 +43,14 @@ Astro-website/
 │   │   ├── BlogList.jsx
 │   │   ├── BlogView.jsx
 │   │   ├── Button.astro
+│   │   ├── ContactFrom.jsx
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Line.astro
 │   │   ├── Navigation.astro
 │   │   ├── PostCard.astro
+│   │   ├── Salutations.jsx
+│   │   ├── SocialButton.astro
 │   │   └── TagButton.jsx
 │   ├── content/
 │   │   ├── config.ts
@@ -57,9 +60,12 @@ Astro-website/
 │   │   └── BaseLayout.astro
 │   ├── pages/
 │   │   ├── blog.astro
+│   │   ├── contact.astro
 │   │   └── index.astro
 │   ├── styles/
 │   │   ├── blogList.css
+│   │   ├── blogPost.css
+│   │   ├── contactForm.css
 │   │   ├── fonts.css
 │   │   └── global.css
 │   └── env.d.ts
