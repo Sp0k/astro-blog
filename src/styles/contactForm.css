@@ -17,7 +17,6 @@ input {
   background: none;
   border: none;
   border-bottom: 2px solid var(--accent-secondary);
-  margin-bottom: 40px;
   height: 42px;
   padding: 0 2px;
 }
@@ -28,16 +27,22 @@ textarea {
   font-weight: 400;
   background: none;
   border: none;
-  border-bottom: 2px solid var(--accent-secondary);
   width: 575px;
-  margin-bottom: 52px;
+  margin-top: 40px;
   padding: 0 2px;
+  outline: none;
 }
-
-textarea:focus,
+.textarea-container {
+  border-bottom: 2px solid var(--accent-secondary);
+  text-align: right;
+}
+.textarea-container:focus-within,
 input:focus {
   outline: none;
   border-bottom: 2px solid var(--text-main);
+}
+.textarea-container:focus-within .char-count {
+  color: var(--text-main);
 }
 
 button {
@@ -83,4 +88,27 @@ button:active {
 
 .email {
   width: 575px;
+  margin-top: 40px;
+}
+
+.consideration {
+  color: var(--accent-secondary);
+  font-size: 20px;
+  margin-bottom: 52px;
+  margin-top: 25px;
+}
+
+.error {
+  color: red;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.char-count {
+  position: relative;
+  color: var(--accent-secondary);
+}
+
+.container-error {
+  border-color: red;
 }
