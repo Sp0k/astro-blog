@@ -117,7 +117,7 @@ p {
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -125,7 +125,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--footer);
+  background: var(--text-main);
   border-radius: 10px;
 }
 
